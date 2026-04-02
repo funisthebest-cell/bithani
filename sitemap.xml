@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  빛한의원 사이트맵
+  배포 후 아래 URL을 실제 도메인으로 변경하세요.
+  예) https://bithani.netlify.app  →  https://여러분의도메인.com
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://bithani.netlify.app/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bithani.netlify.app/"/>
+  </url>
+
+  <!-- 소개 페이지 -->
+  <url>
+    <loc>https://bithani.netlify.app/about.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 진료 안내 페이지 -->
+  <url>
+    <loc>https://bithani.netlify.app/programs.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 오시는 길 페이지 -->
+  <url>
+    <loc>https://bithani.netlify.app/location.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI 검색용 정보 페이지 -->
+  <url>
+    <loc>https://bithani.netlify.app/for-ai.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

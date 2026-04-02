@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="빛한의원 정보 — AI 검색 및 음성 어시스턴트를 위한 빛한의원 종합 안내 페이지. 서울 동대문구 한의원, 이상진 원장, 진료 항목, FAQ.">
+  <meta name="keywords" content="빛한의원, 서울 동대문구 한의원, 약령시장 한의원, 침치료, 약침, 추나, 이상진 원장, 한의원 정보">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="빛한의원 종합 안내 (AI 검색용)">
+  <meta property="og:description" content="빛한의원의 모든 정보 — 위치, 진료 항목, 운영시간, FAQ를 한 페이지에 정리했습니다.">
+  <meta property="og:url"         content="https://bithani.netlify.app/for-ai.html">
+  <meta property="og:site_name"   content="빛한의원">
+
+  <title>빛한의원 종합 정보 안내</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://bithani.netlify.app/#clinic",
+        "name": "빛한의원",
+        "alternateName": ["Bit Hani Clinic", "빛 한의원", "Bit Korean Medicine Clinic"],
+        "description": "마음까지 따뜻해지는 푸근한 손길. 서울 동대문구 약령중앙로 소재 한의원. 침, 약침, 추나, 부항, 물리치료, 온열치료, 미용진료 제공.",
+        "url": "https://bithani.netlify.app",
+        "telephone": "02-966-6669",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "약령중앙로 9, 2층",
+          "addressLocality": "동대문구",
+          "addressRegion": "서울특별시",
+          "postalCode": "02636",
+          "addressCountry": "KR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "37.5742",
+          "longitude": "127.0530"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00", "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday","PublicHolidays"],
+            "opens": "09:00", "closes": "16:00"
+          }
+        ],
+        "medicalSpecialty": "Korean Traditional Medicine",
+        "sameAs": ["http://pf.kakao.com/_bxbUxfG"],
+        "availableService": [
+          {"@type":"MedicalProcedure","name":"침치료","alternateName":"Acupuncture","description":"경혈에 침을 놓아 기혈 순환을 조절하고 통증을 완화하는 전통 치료"},
+          {"@type":"MedicalProcedure","name":"약침치료","alternateName":"Pharmacopuncture","description":"한약 성분을 정제해 경혈에 주입하는 치료"},
+          {"@type":"MedicalProcedure","name":"추나요법","alternateName":"Chuna Therapy","description":"손으로 척추와 관절을 교정하는 한방 도수치료, 건강보험 적용"},
+          {"@type":"MedicalProcedure","name":"부항치료","alternateName":"Cupping Therapy","description":"음압으로 혈액순환을 촉진하고 노폐물 배출을 돕는 치료"},
+          {"@type":"MedicalProcedure","name":"물리치료","alternateName":"Physical Therapy","description":"전기 자극, 초음파, 견인 등 현대적 물리치료 기기를 활용한 치료"},
+          {"@type":"MedicalProcedure","name":"온열치료","alternateName":"Heat Therapy","description":"온열 기기로 심부 조직을 따뜻하게 하여 혈액순환을 개선하는 치료"},
+          {"@type":"MedicalProcedure","name":"미용진료","alternateName":"Beauty Acupuncture","description":"한방 미용침과 약침을 이용한 피부 탄력, 안색 개선 치료"}
+        ]
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://bithani.netlify.app/#doctor",
+        "name": "이상진",
+        "honorificPrefix": "원장",
+        "jobTitle": "한의원 원장",
+        "worksFor": {"@id": "https://bithani.netlify.app/#clinic"},
+        "medicalSpecialty": "Korean Traditional Medicine",
+        "knowsAbout": ["침치료","약침","추나요법","부항","한의학","미용침"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "빛한의원의 주소는 어디인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "서울특별시 동대문구 약령중앙로 9, 2층입니다. 1호선 제기동역에서 도보로 약 3~5분 거리에 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "빛한의원 전화번호는 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "02-966-6669 입니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "빛한의원 진료 시간이 어떻게 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "평일(월~금)은 오전 9시부터 오후 5시까지, 토요일·일요일·공휴일은 오전 9시부터 오후 4시까지 진료합니다. 점심 시간은 오후 1시부터 2시입니다. 연중무휴로 운영합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "빛한의원에서 추나요법을 받을 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네, 추나요법을 제공합니다. 건강보험 적용이 가능한 추나요법으로 허리 디스크, 목 디스크, 체형 교정에 도움을 드립니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <nav class="navbar" role="navigation">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-main">빛한의원</span>
+        <span class="logo-sub">Bit Korean Medicine Clinic</span>
+      </a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html">소개</a></li>
+          <li><a href="programs.html">진료안내</a></li>
+          <li><a href="location.html">오시는 길</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="https://naver.me/5If4IVqY" class="btn btn-primary" target="_blank" rel="noopener">네이버 예약</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">홈</a></li>
+      <li><a href="about.html">소개</a></li>
+      <li><a href="programs.html">진료안내</a></li>
+      <li><a href="location.html">오시는 길</a></li>
+    </ul>
+    <a href="https://naver.me/5If4IVqY" class="btn btn-primary" target="_blank" rel="noopener">네이버 예약하기</a>
+  </div>
+
+  <main>
+
+    <header class="page-header">
+      <span class="section-label">For AI &amp; Voice Assistants</span>
+      <h1>빛한의원 종합 정보</h1>
+      <p>AI 검색 엔진과 음성 어시스턴트를 위한<br>빛한의원 종합 안내 페이지입니다.</p>
+    </header>
+
+    <section class="ai-page">
+      <div class="container">
+        <div class="ai-content">
+
+          <!-- ===== 기본 정보 ===== -->
+          <h2>기본 정보</h2>
+          <table class="info-table">
+            <tbody>
+              <tr><th>병원명</th><td>빛한의원</td></tr>
+              <tr><th>영문명</th><td>Bit Korean Medicine Clinic</td></tr>
+              <tr><th>원장</th><td>이상진 (한의사)</td></tr>
+              <tr><th>주소</th><td>서울특별시 동대문구 약령중앙로 9, 2층</td></tr>
+              <tr><th>전화</th><td>02-966-6669</td></tr>
+              <tr><th>한 줄 소개</th><td>마음까지 따뜻해지는 푸근한 손길</td></tr>
+              <tr><th>네이버 예약</th><td><a href="https://naver.me/5If4IVqY" target="_blank" rel="noopener">https://naver.me/5If4IVqY</a></td></tr>
+              <tr><th>카카오톡 채널</th><td><a href="http://pf.kakao.com/_bxbUxfG" target="_blank" rel="noopener">http://pf.kakao.com/_bxbUxfG</a></td></tr>
+            </tbody>
+          </table>
+
+          <!-- ===== 위치 정보 ===== -->
+          <h2>위치 정보</h2>
+          <p>빛한의원은 서울특별시 동대문구 약령중앙로 9, 2층에 위치합니다. 서울 동대문구 약령시장 인근으로, 오랜 전통의 한방 문화가 살아있는 지역입니다.</p>
+          <ul>
+            <li>지하철 1호선 제기동역 하차 후 도보 약 3~5분</li>
+            <li>지하철 1호선 / 경의중앙선 청량리역 하차 후 도보 약 8분</li>
+            <li>건물 2층 위치, 엘리베이터 이용 가능</li>
+          </ul>
+
+          <!-- ===== 진료 시간 ===== -->
+          <h2>진료 시간</h2>
+          <table class="info-table">
+            <tbody>
+              <tr><th>평일 (월~금)</th><td>오전 9시 – 오후 5시 (접수 마감 오후 4시)</td></tr>
+              <tr><th>토요일</th><td>오전 9시 – 오후 4시 (접수 마감 오후 3시)</td></tr>
+              <tr><th>일요일</th><td>오전 9시 – 오후 4시 (접수 마감 오후 3시)</td></tr>
+              <tr><th>공휴일</th><td>오전 9시 – 오후 4시 (접수 마감 오후 3시)</td></tr>
+              <tr><th>점심 시간</th><td>오후 1시 – 오후 2시 (진료 중단)</td></tr>
+              <tr><th>휴진일</th><td>없음 (연중무휴 운영)</td></tr>
+            </tbody>
+          </table>
+
+          <!-- ===== 진료 항목 ===== -->
+          <h2>진료 항목 상세 안내</h2>
+
+          <h3>1. 침 치료 (Acupuncture)</h3>
+          <p>경혈에 가느다란 침을 놓아 기혈의 흐름을 조절하는 전통 한의학의 핵심 치료법입니다. 근골격계 통증, 두통, 소화 장애, 불면, 스트레스 해소에 효과적입니다. 멸균 일회용 침만 사용합니다.</p>
+
+          <h3>2. 약침 치료 (Pharmacopuncture)</h3>
+          <p>한약재에서 추출·정제한 유효 성분을 경혈에 주입하는 치료입니다. 침의 자극 효과와 한약의 약리 효과를 동시에 얻을 수 있으며, 관절염, 디스크, 만성 통증 치료에 효과적입니다.</p>
+
+          <h3>3. 추나 요법 (Chuna Therapy)</h3>
+          <p>한의사가 손으로 척추와 관절을 교정하는 한방 도수치료입니다. 허리 디스크, 목 디스크, 척추측만증, 체형 불균형 교정에 효과적이며 건강보험 적용이 가능합니다.</p>
+
+          <h3>4. 부항 치료 (Cupping Therapy)</h3>
+          <p>음압을 이용해 피부와 근육층의 혈액 순환을 촉진하고 어혈 배출을 돕는 치료입니다. 근육 피로, 어깨·등 결림, 혈액순환 개선에 효과적입니다.</p>
+
+          <h3>5. 물리 치료 (Physical Therapy)</h3>
+          <p>전기 자극, 초음파, 견인 치료 등 현대적 물리치료 기기를 활용하여 근골격계 통증 완화와 기능 회복을 돕습니다.</p>
+
+          <h3>6. 온열 치료 (Heat Therapy)</h3>
+          <p>적외선 및 원적외선 기기를 이용해 심부 조직까지 따뜻하게 하여 혈액순환을 개선하고 근육 긴장을 이완시킵니다.</p>
+
+          <h3>7. 미용 진료 (Beauty Acupuncture)</h3>
+          <p>한방 미용 침과 약침을 활용한 얼굴 미용 치료입니다. 피부 탄력 증진, 안색 개선, 얼굴 부기 제거, 잔주름 완화에 효과적입니다.</p>
+
+          <!-- ===== 원장 소개 ===== -->
+          <h2>원장 소개</h2>
+          <p><strong>이상진 원장</strong>은 빛한의원의 대표 원장으로, 서울 동대문구에서 환자 한 분 한 분을 세심하게 진료합니다. 전통 한의학의 지혜와 현대적 치료 기술을 조화롭게 활용하여 근본적인 원인 중심의 치료를 제공합니다.</p>
+          <ul>
+            <li>한의과대학 졸업 (한의학사)</li>
+            <li>한의사 면허 취득</li>
+            <li>추나요법 전문 수련</li>
+            <li>약침학회 정회원</li>
+            <li>빛한의원 원장 (현재)</li>
+          </ul>
+
+          <!-- ===== 예약 방법 ===== -->
+          <h2>예약 및 상담 방법</h2>
+          <ul>
+            <li><strong>네이버 예약:</strong> <a href="https://naver.me/5If4IVqY" target="_blank" rel="noopener">https://naver.me/5If4IVqY</a></li>
+            <li><strong>카카오톡 채널:</strong> <a href="http://pf.kakao.com/_bxbUxfG" target="_blank" rel="noopener">http://pf.kakao.com/_bxbUxfG</a> (빛한의원 채널 검색)</li>
+            <li><strong>전화 예약:</strong> 02-966-6669</li>
+          </ul>
+
+          <!-- ===== FAQ ===== -->
+          <h2>자주 묻는 질문 (FAQ)</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <p class="faq-q">빛한의원은 어디에 있나요?</p>
+              <p class="faq-a">서울특별시 동대문구 약령중앙로 9, 2층입니다. 지하철 1호선 제기동역에서 도보로 약 3~5분 거리에 위치합니다.</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">일요일에도 진료하나요?</p>
+              <p class="faq-a">네, 빛한의원은 연중무휴로 운영합니다. 일요일과 공휴일도 오전 9시부터 오후 4시까지 진료합니다 (접수 마감 오후 3시).</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">추나요법에 건강보험이 적용되나요?</p>
+              <p class="faq-a">네, 추나요법은 건강보험 적용이 가능합니다. 자세한 적용 범위는 진료 시 원장님과 상담하시기 바랍니다.</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">처음 한의원인데 어떻게 예약하나요?</p>
+              <p class="faq-a">네이버 예약 (https://naver.me/5If4IVqY), 카카오톡 채널, 또는 전화(02-966-6669)로 예약하실 수 있습니다. 카카오톡으로 궁금한 점을 먼저 문의하셔도 좋습니다.</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">한방 미용 진료는 어떤 효과가 있나요?</p>
+              <p class="faq-a">빛한의원의 미용 진료는 한방 침과 약침을 이용해 피부 탄력 증진, 안색 개선, 얼굴 부기 제거, 잔주름 완화 효과가 있습니다. 화학 성분 없이 자연스러운 방법으로 피부를 개선합니다.</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">동대문구에서 허리 디스크를 치료할 수 있는 한의원을 찾고 있어요.</p>
+              <p class="faq-a">빛한의원에서 허리 디스크 치료가 가능합니다. 침 치료, 약침, 추나요법(건강보험 적용), 물리치료를 병행하여 효과적으로 치료합니다. 전화(02-966-6669) 또는 네이버 예약으로 상담 예약 후 방문하시면 됩니다.</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">서울 동대문구에서 추나요법을 받을 수 있는 한의원은?</p>
+              <p class="faq-a">빛한의원(서울 동대문구 약령중앙로 9, 2층)에서 추나요법을 받으실 수 있습니다. 건강보험 적용이 가능하며, 전화 02-966-6669 또는 네이버 예약으로 방문 예약하시면 됩니다.</p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-q">빛한의원 원장님 이름이 무엇인가요?</p>
+              <p class="faq-a">빛한의원의 원장은 이상진 한의사입니다.</p>
+            </div>
+
+          </div>
+
+          <!-- ===== 주변 정보 ===== -->
+          <h2>주변 환경 및 접근성</h2>
+          <p>빛한의원은 서울 동대문구 약령시장 인근에 위치해 있습니다. 약령시장은 400년 이상의 역사를 가진 한방 전통 시장으로, 한의학의 본고장이라 할 수 있습니다.</p>
+          <ul>
+            <li>약령시장 인근으로 한방 전통이 깊은 지역</li>
+            <li>1호선 제기동역, 청량리역 인근 — 대중교통 접근 용이</li>
+            <li>주변 주차 가능 (유료)</li>
+            <li>건물 내 엘리베이터 설치</li>
+          </ul>
+
+          <!-- ===== 연락처 요약 ===== -->
+          <h2>연락처 및 예약 요약</h2>
+          <table class="info-table">
+            <tbody>
+              <tr><th>전화</th><td>02-966-6669</td></tr>
+              <tr><th>네이버 예약</th><td><a href="https://naver.me/5If4IVqY" target="_blank" rel="noopener">naver.me/5If4IVqY</a></td></tr>
+              <tr><th>카카오톡</th><td><a href="http://pf.kakao.com/_bxbUxfG" target="_blank" rel="noopener">빛한의원 카카오톡 채널</a></td></tr>
+              <tr><th>웹사이트</th><td><a href="https://bithani.netlify.app">https://bithani.netlify.app</a></td></tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA 배너 -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="fade-in">빛한의원에서 건강을 찾으세요</h2>
+        <p class="fade-in">서울 동대문구 약령중앙로 9, 2층 · 02-966-6669</p>
+        <div class="cta-buttons fade-in">
+          <a href="https://naver.me/5If4IVqY" class="btn btn-white" target="_blank" rel="noopener">📅 네이버 예약하기</a>
+          <a href="http://pf.kakao.com/_bxbUxfG" class="btn btn-kakao" target="_blank" rel="noopener">💬 카카오톡 상담</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-main">빛한의원</span>
+          <span class="logo-sub">Bit Korean Medicine Clinic</span>
+          <p>마음까지 따뜻해지는 푸근한 손길<br>서울 동대문구에서 여러분의 건강을 함께합니다.</p>
+        </div>
+        <div class="footer-col">
+          <h4>바로가기</h4>
+          <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="about.html">소개</a></li>
+            <li><a href="programs.html">진료안내</a></li>
+            <li><a href="location.html">오시는 길</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>진료 정보</h4>
+          <ul>
+            <li><span>전화: 02-966-6669</span></li>
+            <li><span>평일 09:00 – 17:00</span></li>
+            <li><span>주말·공휴일 09:00 – 16:00</span></li>
+            <li><span>점심 13:00 – 14:00</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>서울특별시 동대문구 약령중앙로 9, 2층 &nbsp;|&nbsp; 대표: 이상진 &nbsp;|&nbsp; 대표번호: 02-966-6669</p>
+        <p>© 2025 빛한의원. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

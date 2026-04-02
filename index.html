@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="빛한의원 — 마음까지 따뜻해지는 푸근한 손길. 서울 동대문구 약령중앙로 소재. 침, 약침, 추나, 부항, 물리치료, 온열치료, 미용진료. 원장 이상진. 전화 02-966-6669.">
+  <meta name="keywords" content="빛한의원, 동대문구 한의원, 서울 한의원, 약령시장 한의원, 침치료, 약침, 추나요법, 부항, 이상진 원장">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="빛한의원 이상진">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="빛한의원 — 마음까지 따뜻해지는 푸근한 손길">
+  <meta property="og:description" content="서울 동대문구 약령중앙로에 위치한 빛한의원입니다. 침, 약침, 추나, 부항, 물리치료, 온열치료, 미용진료를 제공합니다.">
+  <meta property="og:url"         content="https://bithani.netlify.app">
+  <meta property="og:site_name"   content="빛한의원">
+  <meta property="og:locale"      content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="빛한의원 — 마음까지 따뜻해지는 푸근한 손길">
+  <meta name="twitter:description" content="서울 동대문구 빛한의원 | 침·약침·추나·부항·물리치료·온열치료·미용진료 | 02-966-6669">
+
+  <title>빛한의원 — 마음까지 따뜻해지는 푸근한 손길</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://bithani.netlify.app/#clinic",
+        "name": "빛한의원",
+        "alternateName": "Bit Korean Medicine Clinic",
+        "description": "마음까지 따뜻해지는 푸근한 손길. 서울 동대문구에 위치한 빛한의원은 침, 약침, 추나, 부항, 물리치료, 온열치료, 미용진료를 제공합니다.",
+        "url": "https://bithani.netlify.app",
+        "telephone": "02-966-6669",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "약령중앙로 9, 2층",
+          "addressLocality": "동대문구",
+          "addressRegion": "서울특별시",
+          "addressCountry": "KR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00", "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday"],
+            "opens": "09:00", "closes": "16:00"
+          }
+        ],
+        "medicalSpecialty": "Korean Traditional Medicine",
+        "sameAs": ["http://pf.kakao.com/_bxbUxfG"],
+        "availableService": [
+          {"@type": "MedicalProcedure", "name": "침치료"},
+          {"@type": "MedicalProcedure", "name": "약침치료"},
+          {"@type": "MedicalProcedure", "name": "추나요법"},
+          {"@type": "MedicalProcedure", "name": "부항치료"},
+          {"@type": "MedicalProcedure", "name": "물리치료"},
+          {"@type": "MedicalProcedure", "name": "온열치료"},
+          {"@type": "MedicalProcedure", "name": "미용진료"}
+        ]
+      },
+      {
+        "@type": "Physician",
+        "name": "이상진",
+        "jobTitle": "원장",
+        "worksFor": { "@id": "https://bithani.netlify.app/#clinic" },
+        "medicalSpecialty": "Korean Traditional Medicine"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== 네비게이션 ===================== -->
+  <nav class="navbar" role="navigation" aria-label="메인 메뉴">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="빛한의원 홈">
+        <span class="logo-main">빛한의원</span>
+        <span class="logo-sub">Bit Korean Medicine Clinic</span>
+      </a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html">소개</a></li>
+          <li><a href="programs.html">진료안내</a></li>
+          <li><a href="location.html">오시는 길</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="https://naver.me/5If4IVqY" class="btn btn-primary" target="_blank" rel="noopener">네이버 예약</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="모바일 메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 모바일 메뉴 -->
+  <div class="mobile-menu" role="dialog" aria-label="모바일 메뉴">
+    <ul class="nav-links">
+      <li><a href="index.html">홈</a></li>
+      <li><a href="about.html">소개</a></li>
+      <li><a href="programs.html">진료안내</a></li>
+      <li><a href="location.html">오시는 길</a></li>
+    </ul>
+    <a href="https://naver.me/5If4IVqY" class="btn btn-primary" target="_blank" rel="noopener">네이버 예약하기</a>
+  </div>
+
+  <main>
+
+    <!-- ===================== 히어로 ===================== -->
+    <section class="hero" aria-label="메인 배너">
+      <div class="hero-deco hero-deco-1"></div>
+      <div class="hero-deco hero-deco-2"></div>
+      <div class="hero-content">
+        <span class="hero-badge">서울 동대문구 한의원</span>
+        <h1 class="hero-title">
+          마음까지 따뜻해지는<br>
+          <em>푸근한 손길</em>
+        </h1>
+        <p class="hero-subtitle">
+          빛한의원은 전통 한의학의 지혜로<br>
+          몸과 마음의 균형을 되찾아 드립니다.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://naver.me/5If4IVqY" class="btn btn-gold" target="_blank" rel="noopener">
+            📅 &nbsp;네이버 예약하기
+          </a>
+          <a href="http://pf.kakao.com/_bxbUxfG" class="btn btn-kakao" target="_blank" rel="noopener">
+            💬 &nbsp;카카오톡 상담
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">SCROLL</div>
+    </section>
+
+    <!-- ===================== 왜 빛한의원인가 ===================== -->
+    <section class="why">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-label">Why 빛한의원</span>
+          <h2 class="section-title">왜 빛한의원인가요?</h2>
+          <div class="divider"></div>
+          <p class="section-desc">수천 년 한의학의 지혜와 현대적 치료 기술이 만나<br>당신만을 위한 맞춤 진료를 제공합니다.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card fade-in delay-1">
+            <div class="why-icon">🌿</div>
+            <h3>전통과 현대의 조화</h3>
+            <p>수천 년의 전통 한의학과 최신 임상 연구를 바탕으로 가장 효과적인 치료법을 적용합니다. 검증된 처방으로 안심하고 치료받으실 수 있습니다.</p>
+          </div>
+          <div class="why-card fade-in delay-2">
+            <div class="why-icon">🫱</div>
+            <h3>세심한 맞춤 진료</h3>
+            <p>같은 증상이라도 사람마다 체질과 원인이 다릅니다. 이상진 원장이 환자 한 분 한 분을 꼼꼼히 살펴 가장 적합한 치료 계획을 세워 드립니다.</p>
+          </div>
+          <div class="why-card fade-in delay-3">
+            <div class="why-icon">☀️</div>
+            <h3>따뜻하고 편안한 공간</h3>
+            <p>한의원 이름처럼 빛이 가득한 따뜻한 공간에서 편안하게 치료받으세요. 처음 오시는 분도 긴장 없이 편히 쉬다 가실 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 진료 항목 ===================== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-label">Medical Services</span>
+          <h2 class="section-title">진료 항목</h2>
+          <div class="divider"></div>
+          <p class="section-desc">빛한의원에서 제공하는 다양한 한방 진료 서비스입니다.<br>통증 치료부터 미용 진료까지 전문적으로 케어합니다.</p>
+        </div>
+        <div class="services-grid">
+
+          <div class="service-card fade-in">
+            <div class="service-icon">🪡</div>
+            <h3>침 치료</h3>
+            <p>경혈에 침을 놓아 기혈 순환을 원활하게 하고 통증을 완화합니다. 근골격계 질환, 두통, 소화 장애 등 다양한 증상에 효과적입니다.</p>
+            <a href="programs.html#acupuncture" class="service-more">자세히 보기 →</a>
+          </div>
+
+          <div class="service-card fade-in delay-1">
+            <div class="service-icon">💉</div>
+            <h3>약침 치료</h3>
+            <p>한약 성분을 정제해 경혈에 주입하는 치료법으로, 침의 자극 효과와 한약의 약리 효과를 동시에 얻을 수 있습니다.</p>
+            <a href="programs.html#pharmacopuncture" class="service-more">자세히 보기 →</a>
+          </div>
+
+          <div class="service-card fade-in delay-2">
+            <div class="service-icon">🤲</div>
+            <h3>추나 요법</h3>
+            <p>손으로 척추와 관절을 교정하는 한방 도수치료입니다. 허리 디스크, 목 디스크, 체형 불균형 교정에 효과적입니다.</p>
+            <a href="programs.html#chuna" class="service-more">자세히 보기 →</a>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-icon">🔥</div>
+            <h3>부항 치료</h3>
+            <p>피부에 음압을 가해 혈액 순환을 촉진하고 노폐물 배출을 돕습니다. 근육 피로 해소, 어깨·등 결림에 탁월합니다.</p>
+            <a href="programs.html#cupping" class="service-more">자세히 보기 →</a>
+          </div>
+
+          <div class="service-card fade-in delay-1">
+            <div class="service-icon">⚡</div>
+            <h3>물리 치료</h3>
+            <p>전기 자극, 초음파, 견인 치료 등 현대적 물리치료 기기를 활용해 근골격계 통증과 기능 회복을 돕습니다.</p>
+            <a href="programs.html#physical" class="service-more">자세히 보기 →</a>
+          </div>
+
+          <div class="service-card fade-in delay-2">
+            <div class="service-icon">🌡️</div>
+            <h3>온열 치료</h3>
+            <p>적외선·온열 기기를 이용해 심부 조직까지 따뜻하게 하여 혈액 순환을 개선하고 근육 긴장을 풀어줍니다.</p>
+            <a href="programs.html#heat" class="service-more">자세히 보기 →</a>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-icon">✨</div>
+            <h3>미용 진료</h3>
+            <p>한방 미용 침, 약침을 이용해 피부 톤 개선, 탄력 증진, 부기 제거 등 얼굴 미용을 케어합니다.</p>
+            <a href="programs.html#beauty" class="service-more">자세히 보기 →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 원장 소개 ===================== -->
+    <section class="doctor" id="doctor">
+      <div class="container">
+        <div class="doctor-inner">
+          <div class="doctor-image-wrap fade-in">
+            <!-- 실제 사진이 생기면 아래 주석을 해제하고 이미지 파일을 images/ 폴더에 넣으세요 -->
+            <!-- <img src="images/doctor.jpg" alt="빛한의원 이상진 원장" class="doctor-img"> -->
+            <div class="doctor-img-placeholder">
+              <div class="placeholder-icon">👨‍⚕️</div>
+              <p>원장님 사진을<br>이 자리에 넣으세요<br><br><small style="font-size:0.75rem;">images/doctor.jpg 파일로 저장 후<br>위 주석을 해제하시면 됩니다</small></p>
+            </div>
+            <div class="doctor-badge">
+              <strong>이상진 원장</strong>
+              <span>한의학 전문의</span>
+            </div>
+          </div>
+          <div class="doctor-content fade-in delay-2">
+            <div class="section-header">
+              <span class="section-label">Our Doctor</span>
+              <h2 class="section-title">이상진 원장을<br>소개합니다</h2>
+              <div class="divider"></div>
+            </div>
+            <p class="doctor-desc">
+              안녕하세요, 빛한의원 원장 이상진입니다.<br><br>
+              저는 환자 한 분 한 분이 자신의 몸을 가장 잘 아는 전문가라고 믿습니다. 제 역할은 그 몸의 목소리에 귀 기울이고, 필요한 도움을 드리는 것입니다.<br><br>
+              따뜻하고 편안한 진료 환경에서 충분히 이야기 나누며, 단순히 증상만이 아닌 근본적인 원인을 함께 찾아가겠습니다.
+            </p>
+            <ul class="doctor-career">
+              <li>한의과대학 졸업</li>
+              <li>한의사 면허 취득</li>
+              <li>추나요법 전문 수련</li>
+              <li>약침 전문 교육 이수</li>
+              <li>빛한의원 원장 (현)</li>
+            </ul>
+            <a href="about.html" class="btn btn-primary">원장 자세히 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 진료시간 & 연락처 ===================== -->
+    <section class="hours-section" id="hours">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-label">Hours &amp; Contact</span>
+          <h2 class="section-title">진료 시간 &amp; 연락처</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="hours-inner">
+
+          <div class="hours-card fade-in">
+            <h3>🕘 진료 시간</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td>평일 (월~금)</td>
+                  <td>09:00 – 17:00<br><small style="color:var(--text-muted);font-size:0.8rem;">접수 마감 16:00</small></td>
+                </tr>
+                <tr>
+                  <td>토요일</td>
+                  <td>09:00 – 16:00<br><small style="color:var(--text-muted);font-size:0.8rem;">접수 마감 15:00</small></td>
+                </tr>
+                <tr>
+                  <td>일요일 · 공휴일</td>
+                  <td>09:00 – 16:00<br><small style="color:var(--text-muted);font-size:0.8rem;">접수 마감 15:00</small></td>
+                </tr>
+                <tr>
+                  <td>점심 시간</td>
+                  <td>13:00 – 14:00 <span class="hours-badge">휴진</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="hours-note">
+              ✅ &nbsp;<strong>연중무휴 운영</strong> — 공휴일에도 진료합니다.<br>
+              ⚠️ &nbsp;접수 마감 이후에는 당일 진료가 어려울 수 있습니다.
+            </div>
+          </div>
+
+          <div class="contact-card fade-in delay-2">
+            <h3>📍 찾아오시는 길</h3>
+            <div class="contact-item">
+              <span class="contact-icon">📌</span>
+              <div class="contact-text">
+                <strong>주소</strong>
+                <span>서울특별시 동대문구 약령중앙로 9, 2층</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div class="contact-text">
+                <strong>전화</strong>
+                <span><a href="tel:02-966-6669">02-966-6669</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🚇</span>
+              <div class="contact-text">
+                <strong>교통</strong>
+                <span>1호선 제기동역 / 경의중앙선 왕십리역 인근</span>
+              </div>
+            </div>
+            <div class="contact-buttons">
+              <a href="https://naver.me/5If4IVqY" class="contact-btn btn-naver" target="_blank" rel="noopener">
+                📅 &nbsp;네이버로 예약하기
+              </a>
+              <a href="http://pf.kakao.com/_bxbUxfG" class="contact-btn btn-kakao-c" target="_blank" rel="noopener">
+                💬 &nbsp;카카오톡 채널 상담
+              </a>
+              <a href="tel:02-966-6669" class="contact-btn btn-call">
+                📞 &nbsp;전화로 예약하기
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA 배너 ===================== -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="fade-in">지금 바로 예약하고<br>편안한 치료를 경험하세요</h2>
+        <p class="fade-in">연중무휴 진료 · 네이버 간편 예약 · 카카오톡 채널 상담</p>
+        <div class="cta-buttons fade-in">
+          <a href="https://naver.me/5If4IVqY" class="btn btn-white" target="_blank" rel="noopener">📅 &nbsp;네이버 예약하기</a>
+          <a href="http://pf.kakao.com/_bxbUxfG" class="btn btn-kakao" target="_blank" rel="noopener">💬 &nbsp;카카오톡 상담</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== 푸터 ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <span class="logo-main">빛한의원</span>
+          <span class="logo-sub">Bit Korean Medicine Clinic</span>
+          <p>마음까지 따뜻해지는 푸근한 손길<br>서울 동대문구에서 여러분의 건강을 함께합니다.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>바로가기</h4>
+          <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="about.html">소개</a></li>
+            <li><a href="programs.html">진료안내</a></li>
+            <li><a href="location.html">오시는 길</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>진료 정보</h4>
+          <ul>
+            <li><span>전화: 02-966-6669</span></li>
+            <li><span>평일 09:00 – 17:00</span></li>
+            <li><span>주말·공휴일 09:00 – 16:00</span></li>
+            <li><span>점심 13:00 – 14:00</span></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>서울특별시 동대문구 약령중앙로 9, 2층 &nbsp;|&nbsp; 대표: 이상진 &nbsp;|&nbsp; 대표번호: 02-966-6669</p>
+        <p>© 2025 빛한의원. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
