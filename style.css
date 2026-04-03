@@ -672,6 +672,63 @@ section { padding: 100px 0; }
 .btn-call:hover { background: rgba(255,255,255,0.22); color: #fff; transform: translateY(-2px); }
 
 /* =====================================================
+   미디어 출연 & 저서
+   ===================================================== */
+.media-section { background: var(--bg); }
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.media-item { display: flex; flex-direction: column; gap: 14px; }
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.media-label {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-light);
+  text-align: center;
+  font-weight: 500;
+}
+.book-row { display: flex; justify-content: center; }
+.book-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--white);
+  border: 1px solid rgba(158,130,72,0.2);
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.book-icon { font-size: 2.4rem; }
+.book-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.book-meta {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* =====================================================
    CTA 배너
    ===================================================== */
 .cta-banner {
@@ -1196,6 +1253,7 @@ footer { background: #1a2d22; color: rgba(255,255,255,0.72); padding: 64px 0 40p
   .doctor-inner,
   .doctor-full-inner,
   .about-grid,
+  .media-grid,
   .values-grid,
   .location-info,
   .transit-grid,
