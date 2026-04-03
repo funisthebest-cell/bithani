@@ -83,10 +83,43 @@
     <section class="about-story">
       <div class="container">
         <div class="about-grid">
-          <div class="about-img-placeholder fade-in">
-            <!-- <img src="images/clinic.jpg" alt="빛한의원 내부" style="width:100%;border-radius:var(--radius-lg);"> -->
-            <div class="placeholder-icon">🏥</div>
-            <p>한의원 내부 사진을<br>이 자리에 넣으세요</p>
+          <div class="gallery-carousel fade-in" role="region" aria-label="원내 사진 갤러리">
+            <div class="gallery-track">
+              <div class="gallery-slide active">
+                <img src="images/gallery-01.jpg" alt="빛한의원 대기실">
+                <div class="gallery-caption">대기실</div>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery-02.jpg" alt="빛한의원 치료실">
+                <div class="gallery-caption">치료실</div>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery-03.jpg" alt="빛한의원 온열치료실">
+                <div class="gallery-caption">온열치료실</div>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery-04.jpg" alt="빛한의원 원내 전경">
+                <div class="gallery-caption">원내 전경</div>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery-05.jpg" alt="빛한의원 진료실">
+                <div class="gallery-caption">진료실</div>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery-06.jpg" alt="빛한의원 접수 데스크">
+                <div class="gallery-caption">접수 데스크</div>
+              </div>
+            </div>
+            <button class="gallery-btn gallery-prev" aria-label="이전 사진">&#8249;</button>
+            <button class="gallery-btn gallery-next" aria-label="다음 사진">&#8250;</button>
+            <div class="gallery-dots">
+              <button class="gallery-dot active" aria-label="대기실 사진"></button>
+              <button class="gallery-dot" aria-label="치료실 사진"></button>
+              <button class="gallery-dot" aria-label="온열치료실 사진"></button>
+              <button class="gallery-dot" aria-label="원내 전경 사진"></button>
+              <button class="gallery-dot" aria-label="진료실 사진"></button>
+              <button class="gallery-dot" aria-label="접수 데스크 사진"></button>
+            </div>
           </div>
           <div class="about-text fade-in delay-2">
             <div class="section-header" style="text-align:left; margin-bottom:28px;">
@@ -146,14 +179,9 @@
         </div>
         <div class="doctor-full-inner">
           <div class="fade-in" style="position:relative;">
-            <div class="doctor-img-placeholder">
-              <!-- <img src="images/doctor.jpg" alt="이상진 원장" class="doctor-img"> -->
-              <div class="placeholder-icon">👨‍⚕️</div>
-              <p>원장님 사진을<br>이 자리에 넣으세요<br><br><small style="font-size:0.75rem;">images/doctor.jpg 파일로 저장 후<br>위 주석을 해제하세요</small></p>
-            </div>
+            <img src="images/doctor.jpg" alt="이상진 원장" class="doctor-img">
             <div class="doctor-badge">
               <strong>이상진 원장</strong>
-              <span>한의학 전문의</span>
             </div>
           </div>
           <div class="doctor-content fade-in delay-2">

@@ -92,4 +92,50 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // ===================================================
+  // 6. 원내 갤러리 캐러셀
+  // ===================================================
+  const carousel = document.querySelector('.gallery-carousel');
+  if (carousel) {
+    const slides  = Array.from(carousel.querySelectorAll('.gallery-slide'));
+    const dots    = Array.from(carousel.querySelectorAll('.gallery-dot'));
+    const prevBtn = carousel.querySelector('.gallery-prev');
+    const nextBtn = carousel.querySelector('.gallery-next');
+    let current   = 0;
+    let autoTimer = null;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function startAuto() { autoTimer = setInterval(function () { goTo(current + 1); }, 4000); }
+    function stopAuto()  { clearInterval(autoTimer); }
+
+    prevBtn.addEventListener('click', function () { stopAuto(); goTo(current - 1); startAuto(); });
+    nextBtn.addEventListener('click', function () { stopAuto(); goTo(current + 1); startAuto(); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { stopAuto(); goTo(i); startAuto(); });
+    });
+
+    // 터치 스와이프 (모바일)
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', function (e) {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        stopAuto();
+        goTo(diff > 0 ? current + 1 : current - 1);
+        startAuto();
+      }
+    }, { passive: true });
+
+    startAuto();
+  }
+
 });
