@@ -1,0 +1,46 @@
+name: 📝 Daily Blog Post
+
+on:
+  # 매일 오전 9시 KST (= 00:00 UTC) 자동 실행
+  schedule:
+    - cron: '0 0 * * *'
+
+  # GitHub Actions 탭에서 수동 실행 가능 (테스트용)
+  workflow_dispatch:
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 파일 커밋 권한
+
+    steps:
+      # 1. 저장소 체크아웃
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Python 설치
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. 의존성 설치 (anthropic 패키지)
+      - name: 📦 Install dependencies
+        run: pip install anthropic
+
+      # 4. 블로그 포스트 생성
+      - name: ✍️ Generate blog post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_post.py
+
+      # 5. 생성된 파일 커밋 & 푸시
+      - name: 🚀 Commit and push
+        run: |
+          git config user.name  "Bithani Blog Bot"
+          git config user.email "bot@bithani.netlify.app"
+          git add blog/
+          # 변경사항이 없으면 커밋하지 않음
+          git diff --cached --quiet || git commit -m "📝 블로그 포스팅 $(date +'%Y-%m-%d')"
+          git push

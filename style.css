@@ -1288,3 +1288,267 @@ footer { background: #1a2d22; color: rgba(255,255,255,0.72); padding: 64px 0 40p
   .services-grid { grid-template-columns: 1fr; }
   .location-info { grid-template-columns: 1fr; }
 }
+
+/* =====================================================
+   블로그 — 목록 페이지
+   ===================================================== */
+
+.blog-section {
+  padding: 80px 0 100px;
+  background: var(--bg);
+}
+
+.blog-stats {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-stats strong {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.blog-card-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.post-badge {
+  background: var(--primary);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.blog-card-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.blog-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+  /* 3줄 클램프 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-more {
+  font-size: 0.82rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.no-posts {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 80px 0;
+  font-size: 1rem;
+}
+
+/* =====================================================
+   블로그 — 개별 포스트 페이지
+   ===================================================== */
+
+.blog-post-wrap {
+  background: var(--bg);
+  padding: 60px 0 100px;
+}
+
+.blog-post-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.back-to-blog {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: opacity 0.2s;
+}
+
+.back-to-blog:hover { opacity: 0.7; }
+
+.post-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.45;
+  margin: 0 0 20px;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.post-meta span { display: flex; align-items: center; gap: 4px; }
+
+/* 본문 스타일 */
+.post-body {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 56px;
+}
+
+.post-body h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 44px 0 16px;
+  padding-left: 14px;
+  border-left: 3px solid var(--primary);
+}
+
+.post-body h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 32px 0 12px;
+}
+
+.post-body p {
+  margin: 0 0 20px;
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 20px;
+  padding-left: 24px;
+}
+
+.post-body li {
+  margin-bottom: 8px;
+}
+
+.post-body strong {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* CTA 박스 */
+.post-cta-box {
+  background: var(--primary-bg);
+  border: 1px solid rgba(61,107,79,0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  margin-bottom: 48px;
+}
+
+.post-cta-box p {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.post-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* 이전/다음 포스트 */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.post-nav-link {
+  font-size: 0.875rem;
+  color: var(--primary);
+  text-decoration: none;
+  max-width: 48%;
+  line-height: 1.4;
+  transition: opacity 0.2s;
+}
+
+.post-nav-link:hover { opacity: 0.7; }
+.post-nav-link.next { text-align: right; margin-left: auto; }
+
+/* =====================================================
+   블로그 반응형
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .post-title { font-size: 1.5rem; }
+  .post-cta-box { padding: 24px 20px; }
+  .post-cta-buttons { flex-direction: column; }
+  .post-cta-buttons .btn { width: 100%; justify-content: center; }
+}
