@@ -1,9 +1,11 @@
 name: 📝 Daily Blog Post
 
 on:
-  # 매일 오전 9시 KST (= 00:00 UTC) 자동 실행
+  # 매일 오전 9시~오후 1시 KST 사이 2시간 간격 실행 (GitHub 지연 대비)
+  # 00:00 / 02:00 / 04:00 UTC = KST 09:00 / 11:00 / 13:00
+  # 이미 오늘 포스팅된 경우 스크립트가 자동 skip
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0,2,4 * * *'
 
   # GitHub Actions 탭에서 수동 실행 가능 (테스트용)
   workflow_dispatch:
