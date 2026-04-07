@@ -116,6 +116,7 @@ def generate_content(topic, client):
 6. 분량: 800~1000자 내외
 7. h2, h3 소제목으로 구조화하여 읽기 쉽게
 8. 의학적 내용은 과장 없이 신뢰감 있게
+9. HTML 태그에 속성(class, id, style 등) 절대 사용 금지 — JSON 파싱 오류 방지
 
 반드시 아래 JSON 형식으로만 응답하세요. 마크다운 코드블록, 설명 텍스트 없이 순수 JSON만 출력하세요:
 {{
@@ -127,7 +128,7 @@ def generate_content(topic, client):
 
     msg = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=3000,
+        max_tokens=8000,
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -138,7 +139,24 @@ def generate_content(topic, client):
     raw = raw.strip()
 
     json_m = re.search(r'\{[\s\S]*\}', raw)
-    return json.loads(json_m.group() if json_m else raw)
+    target = json_m.group() if json_m else raw
+    try:
+        return json.loads(target)
+    except json.JSONDecodeError:
+        # content_html 내 따옴표로 JSON이 깨지는 경우 필드별로 직접 추출
+        def extract_field(text, key):
+            m = re.search(rf'"{key}"\s*:\s*"((?:[^"\\]|\\.)*)"', text)
+            return m.group(1) if m else ''
+        # content_html은 마지막 필드이므로 끝까지 추출
+        content_m = re.search(r'"content_html"\s*:\s*"([\s\S]*?)"\s*\}\s*$', target)
+        if not content_m:
+            content_m = re.search(r'"content_html"\s*:\s*"([\s\S]*)', target)
+        return {
+            'title':       extract_field(target, 'title'),
+            'description': extract_field(target, 'description'),
+            'keywords':    extract_field(target, 'keywords'),
+            'content_html': content_m.group(1).rstrip('"}').strip() if content_m else '',
+        }
 
 
 # ─── 포스트 HTML 생성 ─────────────────────────────────────
