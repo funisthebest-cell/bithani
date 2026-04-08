@@ -31,14 +31,6 @@
 </head>
 <body>
 
-  <!-- Language Switcher -->
-  <div style="background:#f2ede6; padding:8px 0; text-align:center; font-size:0.85rem; border-bottom:1px solid #e0d8cc;">
-    <a href="https://bithani.netlify.app/" style="color:#3d6b4f; text-decoration:none; margin:0 10px;">한국어</a>
-    <strong style="color:#3d6b4f; margin:0 10px; border-bottom:2px solid #3d6b4f;">English</strong>
-    <a href="https://bithani.netlify.app/zh/" style="color:#3d6b4f; text-decoration:none; margin:0 10px;">中文</a>
-    <a href="https://bithani.netlify.app/ja/" style="color:#3d6b4f; text-decoration:none; margin:0 10px;">日本語</a>
-  </div>
-
   <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Main Menu">
     <div class="container">
@@ -53,7 +45,16 @@
           <li><a href="../blog/index.html">Blog</a></li>
           <li><a href="location.html">Location</a></li>
         </ul>
-        <div class="nav-cta">
+        <div class="nav-cta" style="display:flex;align-items:center;gap:14px;">
+          <div style="font-size:0.8rem;display:flex;gap:6px;align-items:center;">
+            <a href="/" style="color:inherit;text-decoration:none;opacity:0.7;">한</a>
+            <span style="opacity:0.3;">|</span>
+            <strong style="opacity:1;">EN</strong>
+            <span style="opacity:0.3;">|</span>
+            <a href="/zh/" style="color:inherit;text-decoration:none;opacity:0.7;">中</a>
+            <span style="opacity:0.3;">|</span>
+            <a href="/ja/" style="color:inherit;text-decoration:none;opacity:0.7;">日</a>
+          </div>
           <a href="https://naver.me/5If4IVqY" class="btn btn-primary" target="_blank" rel="noopener">Book Now</a>
         </div>
       </div>
