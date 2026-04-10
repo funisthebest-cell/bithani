@@ -245,7 +245,14 @@ def build_post_html(post_data, date_str, prev_entry):
           <li><a href="../index.html" class="active">블로그</a></li>
           <li><a href="../../location.html">오시는 길</a></li>
         </ul>
-        <div class="nav-cta">
+        <div class="nav-cta" style="display:flex; align-items:center; gap:14px;">
+          <div style="font-size:0.8rem; display:flex; gap:6px; align-items:center; letter-spacing:0.02em;">
+            <a href="../../en/blog/" style="color:inherit; text-decoration:none; opacity:0.7;">EN</a>
+            <span style="opacity:0.3;">|</span>
+            <a href="../../zh/blog/" style="color:inherit; text-decoration:none; opacity:0.7;">中</a>
+            <span style="opacity:0.3;">|</span>
+            <a href="../../ja/blog/" style="color:inherit; text-decoration:none; opacity:0.7;">日</a>
+          </div>
           <a href="{NAVER_BOOKING}" class="btn btn-primary" target="_blank" rel="noopener">네이버 예약</a>
         </div>
       </div>
@@ -400,7 +407,14 @@ def rebuild_index(manifest):
           <li><a href="index.html" class="active">블로그</a></li>
           <li><a href="../location.html">오시는 길</a></li>
         </ul>
-        <div class="nav-cta">
+        <div class="nav-cta" style="display:flex; align-items:center; gap:14px;">
+          <div style="font-size:0.8rem; display:flex; gap:6px; align-items:center; letter-spacing:0.02em;">
+            <a href="../en/blog/" style="color:inherit; text-decoration:none; opacity:0.7;">EN</a>
+            <span style="opacity:0.3;">|</span>
+            <a href="../zh/blog/" style="color:inherit; text-decoration:none; opacity:0.7;">中</a>
+            <span style="opacity:0.3;">|</span>
+            <a href="../ja/blog/" style="color:inherit; text-decoration:none; opacity:0.7;">日</a>
+          </div>
           <a href="https://naver.me/5If4IVqY" class="btn btn-primary" target="_blank" rel="noopener">네이버 예약</a>
         </div>
       </div>
