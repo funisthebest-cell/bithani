@@ -493,6 +493,60 @@ def rebuild_index(manifest):
     print(f"  ✅ blog/index.html 재생성 완료 (총 {count}개)")
 
 
+# ─── 사이트맵 재생성 ──────────────────────────────────────
+SITEMAP_PATH = os.path.join(ROOT_DIR, 'sitemap.xml')
+
+STATIC_PAGES = [
+    {"loc": "",            "changefreq": "monthly", "priority": "1.0"},
+    {"loc": "about.html",  "changefreq": "yearly",  "priority": "0.8"},
+    {"loc": "programs.html","changefreq":"yearly",  "priority": "0.9"},
+    {"loc": "location.html","changefreq":"yearly",  "priority": "0.8"},
+    {"loc": "for-ai.html", "changefreq": "monthly", "priority": "0.7"},
+    {"loc": "blog/",       "changefreq": "daily",   "priority": "0.8"},
+]
+
+def rebuild_sitemap(manifest):
+    today = datetime.date.today().strftime('%Y-%m-%d')
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+        '        xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+        '',
+        '  <!-- 정적 페이지 -->',
+    ]
+
+    for page in STATIC_PAGES:
+        loc = f"{SITE_URL}/{page['loc']}" if page['loc'] else f"{SITE_URL}/"
+        lines += [
+            '  <url>',
+            f'    <loc>{loc}</loc>',
+            f'    <lastmod>{today}</lastmod>',
+            f'    <changefreq>{page["changefreq"]}</changefreq>',
+            f'    <priority>{page["priority"]}</priority>',
+            '  </url>',
+        ]
+
+    if manifest:
+        lines += ['', '  <!-- 블로그 포스트 -->']
+        for i, post in enumerate(manifest):
+            priority = '0.7' if i < 7 else '0.6'
+            lines += [
+                '  <url>',
+                f'    <loc>{SITE_URL}/blog/posts/{post["filename"]}</loc>',
+                f'    <lastmod>{post["date"]}</lastmod>',
+                '    <changefreq>monthly</changefreq>',
+                f'    <priority>{priority}</priority>',
+                '  </url>',
+            ]
+
+    lines.append('')
+    lines.append('</urlset>')
+
+    with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines))
+    print(f"  ✅ sitemap.xml 재생성 완료 (정적 {len(STATIC_PAGES)}개 + 포스트 {len(manifest)}개)")
+
+
 # ─── 메인 ─────────────────────────────────────────────────
 def main():
     os.makedirs(POSTS_DIR, exist_ok=True)
@@ -542,6 +596,9 @@ def main():
 
     # 블로그 인덱스 재생성
     rebuild_index(manifest)
+
+    # 사이트맵 재생성
+    rebuild_sitemap(manifest)
 
     print(f"\n🎉 포스팅 완료! ({date_str})")
 
