@@ -10,11 +10,20 @@ on:
   # GitHub Actions 탭에서 수동 실행 가능 (테스트용)
   workflow_dispatch:
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   generate-post:
     runs-on: ubuntu-latest
     permissions:
       contents: write   # 파일 커밋 권한
+      pages: write      # GitHub Pages 배포 권한
+      id-token: write   # OIDC 토큰 (Pages 배포에 필요)
+
+    environment:
+      name: github-pages
 
     steps:
       # 1. 저장소 체크아웃
@@ -46,3 +55,16 @@ jobs:
           # 변경사항이 없으면 커밋하지 않음
           git diff --cached --quiet || git commit -m "📝 블로그 포스팅 $(date +'%Y-%m-%d')"
           git push
+
+      # 6. GitHub Pages 배포 (GITHUB_TOKEN push는 deploy.yml을 트리거하지 않으므로 직접 배포)
+      - name: 🔧 Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📦 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: 🌐 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
