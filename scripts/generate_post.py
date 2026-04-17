@@ -73,6 +73,66 @@ TOPICS = [
     "족저근막염 한방 치료법",
 ]
 
+# ─── 토픽 → Pillar 매핑 ──────────────────────────────────
+TOPIC_TO_PILLAR = {
+    # 추나요법 클러스터
+    "목 디스크 증상과 한방 치료법":               ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "허리 디스크, 수술 없이 추나요법으로 치료하기": ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "목 결림·경추 통증 한의원 치료법":             ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "추나요법 건강보험 적용 완벽 안내":            ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "체형 불균형 교정 – 추나요법과 침 치료":       ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "척추측만증 한의원 치료 안내":                 ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "추나요법 몇 번 받으면 효과를 볼 수 있나요":   ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    "직장인 목·허리 통증 한방 솔루션":            ("../../pillars/chuna.html",             "추나요법 완전 가이드"),
+    # 침치료 클러스터
+    "오십견(어깨 통증) 침 치료 효과와 회복 기간": ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "만성 두통 한방 치료로 해결하기":             ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "불면증과 침 치료 – 한방 수면 개선법":        ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "소화불량과 위장 질환 한방 치료":             ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "부항 치료의 효과와 주의사항":               ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "한방 미용침으로 피부 탄력 개선하기":         ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "침 치료는 아픈가요? 한의원 침 치료 Q&A":     ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "한방 치료 부작용, 안전한가요?":             ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "만성 피로 회복 침 치료 효과":               ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "두통과 어지럼증 한방 치료":                 ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "스트레스성 통증과 근육 긴장 한방 치료":      ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "봄철 알레르기 비염 한방 치료법":            ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "여름철 냉방병 한의원에서 치료하기":          ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "가을 환절기 면역력 강화 한방 방법":         ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "한의원에서 면역력 높이는 방법":             ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "산후 한방 치료와 몸 회복 방법":            ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    "갱년기 증상 한방 치료로 완화하기":          ("../../pillars/acupuncture.html",       "침치료 완전 가이드"),
+    # 약침 클러스터
+    "약침 치료란 무엇인가 – 효과와 적용 범위":   ("../../pillars/pharmacopuncture.html",  "약침 완전 가이드"),
+    "약침과 일반 침의 차이점":                  ("../../pillars/pharmacopuncture.html",  "약침 완전 가이드"),
+    # 통증치료 클러스터
+    "무릎 관절염 한의원에서 치료하는 방법":       ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "좌골신경통 한의원 치료 안내":              ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "발목 염좌 후 한방 치료로 빠른 회복":        ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "테니스엘보(팔꿈치 통증) 한의원 치료법":     ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "손목 터널 증후군 한방 치료":               ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "고관절 통증 한의원 치료":                  ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "족저근막염 한방 치료법":                   ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "겨울철 관절 통증 악화 이유와 한방 치료":    ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "온열치료 효능과 적용 질환":                ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+    "물리치료와 침치료 병행 치료의 장점":        ("../../pillars/pain.html",              "한방 통증치료 가이드"),
+}
+
+
+def pillar_link_html(topic):
+    """주제에 해당하는 pillar 링크 박스 HTML 반환. 매핑 없으면 빈 문자열."""
+    entry = TOPIC_TO_PILLAR.get(topic)
+    if not entry:
+        return ""
+    url, title = entry
+    return f"""
+          <div class="post-cta-box" style="background:#f0f4f0; border-left: 4px solid #5a8a5a; margin-bottom: 24px;">
+            <p>📚 이 글은 <strong><a href="{url}">{title}</a></strong>의 일부입니다.</p>
+            <p style="margin:8px 0 16px;">{title}에서 원리·종류·치료 과정·FAQ를 한 페이지에서 확인하세요.</p>
+            <a href="{url}" class="btn btn-outline">{title} 전체 보기 →</a>
+          </div>"""
+
+
 # ─── 경로 설정 ────────────────────────────────────────────
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR    = os.path.join(SCRIPT_DIR, '..')
@@ -160,7 +220,7 @@ def generate_content(topic, client):
 
 
 # ─── 포스트 HTML 생성 ─────────────────────────────────────
-def build_post_html(post_data, date_str, prev_entry):
+def build_post_html(post_data, date_str, prev_entry, topic=""):
     title       = post_data["title"]
     description = post_data["description"]
     keywords    = post_data["keywords"]
@@ -173,6 +233,8 @@ def build_post_html(post_data, date_str, prev_entry):
             f'<a href="{prev_entry["filename"]}" class="post-nav-link prev">'
             f'← {prev_entry["title"]}</a>'
         )
+
+    pillar_box = pillar_link_html(topic)
 
     return f"""<!DOCTYPE html>
 <html lang="ko">
@@ -281,7 +343,7 @@ def build_post_html(post_data, date_str, prev_entry):
           <article class="post-body">
             {content}
           </article>
-
+          {pillar_box}
           <div class="post-cta-box">
             <p>📍 <strong>{CLINIC_NAME}</strong> — {LOCATION}</p>
             <p>진료 예약 및 궁금한 점은 편하게 문의해 주세요.</p>
@@ -497,12 +559,16 @@ def rebuild_index(manifest):
 SITEMAP_PATH = os.path.join(ROOT_DIR, 'sitemap.xml')
 
 STATIC_PAGES = [
-    {"loc": "",            "changefreq": "monthly", "priority": "1.0"},
-    {"loc": "about.html",  "changefreq": "yearly",  "priority": "0.8"},
-    {"loc": "programs.html","changefreq":"yearly",  "priority": "0.9"},
-    {"loc": "location.html","changefreq":"yearly",  "priority": "0.8"},
-    {"loc": "for-ai.html", "changefreq": "monthly", "priority": "0.7"},
-    {"loc": "blog/",       "changefreq": "daily",   "priority": "0.8"},
+    {"loc": "",                               "changefreq": "monthly", "priority": "1.0"},
+    {"loc": "about.html",                     "changefreq": "yearly",  "priority": "0.8"},
+    {"loc": "programs.html",                  "changefreq": "yearly",  "priority": "0.9"},
+    {"loc": "location.html",                  "changefreq": "yearly",  "priority": "0.8"},
+    {"loc": "for-ai.html",                    "changefreq": "monthly", "priority": "0.7"},
+    {"loc": "blog/",                          "changefreq": "daily",   "priority": "0.8"},
+    {"loc": "pillars/chuna.html",             "changefreq": "monthly", "priority": "0.9"},
+    {"loc": "pillars/acupuncture.html",       "changefreq": "monthly", "priority": "0.9"},
+    {"loc": "pillars/pharmacopuncture.html",  "changefreq": "monthly", "priority": "0.9"},
+    {"loc": "pillars/pain.html",              "changefreq": "monthly", "priority": "0.9"},
 ]
 
 def rebuild_sitemap(manifest):
@@ -576,7 +642,7 @@ def main():
 
     # 포스트 HTML 저장
     prev_entry = manifest[0] if manifest else None
-    post_html  = build_post_html(post_data, date_str, prev_entry)
+    post_html  = build_post_html(post_data, date_str, prev_entry, topic=topic)
     post_path  = os.path.join(POSTS_DIR, f"{date_str}.html")
     with open(post_path, 'w', encoding='utf-8') as f:
         f.write(post_html)
