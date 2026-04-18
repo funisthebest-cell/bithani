@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name  "Bithani Blog Bot"
           git config user.email "bot@bithani.github.io"
-          git add blog/
+          git add blog/ sitemap.xml
           # 변경사항이 없으면 커밋하지 않음
           git diff --cached --quiet || git commit -m "📝 블로그 포스팅 $(date +'%Y-%m-%d')"
           git push
