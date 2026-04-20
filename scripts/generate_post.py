@@ -27,7 +27,7 @@ LOCATION        = "서울 동대문구 약령중앙로 9, 2층"
 PHONE           = "02-966-6669"
 NAVER_BOOKING   = "https://naver.me/5If4IVqY"
 KAKAO_CHANNEL   = "http://pf.kakao.com/_bxbUxfG"
-SITE_URL        = "https://funisthebest-cell.github.io/bithani"
+SITE_URL        = "https://bithani.com"
 
 # ─── 블로그 주제 풀 (순환 사용) ─────────────────────────
 TOPICS = [
