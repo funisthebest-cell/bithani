@@ -192,8 +192,9 @@ def generate_content(topic, client):
   "content_html": "<h2>소제목</h2><p>본문 HTML (h2, h3, p, ul, li 태그 사용)</p>"
 }}"""
 
+    model = os.environ.get("CLAUDE_MODEL", "claude-sonnet-5-5")
     msg = client.messages.create(
-        model="claude-sonnet-5-5",
+        model=model,
         max_tokens=8000,
         messages=[{"role": "user", "content": prompt}]
     )

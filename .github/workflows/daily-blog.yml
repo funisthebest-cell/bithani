@@ -44,6 +44,10 @@ jobs:
       - name: ✍️ Generate blog post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # 모델을 GitHub Variables(vars.CLAUDE_MODEL)로 재정의 가능
+          # Settings → Variables → New variable: CLAUDE_MODEL = claude-sonnet-5-5
+          # 설정 안 하면 스크립트 기본값(claude-sonnet-5-5) 사용
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
         run: python scripts/generate_post.py
 
       # 5. 생성된 파일 커밋 & 푸시
