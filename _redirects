@@ -1,10 +1,17 @@
+# ============================================================
+# 404 안전망: 번역 블로그 포스트 URL → 한국어 원문 301 리다이렉트
+# Google이 과거 hreflang/링크로 캐시한 번역 URL을 따라와도 404 없이 처리
+# ============================================================
+/en/blog/posts/:date  /blog/posts/:date  301
+/zh/blog/posts/:date  /blog/posts/:date  301
+/ja/blog/posts/:date  /blog/posts/:date  301
+
+# ============================================================
 # Netlify language-based redirects
+# 중국어·일본어만 서버사이드 302 처리 (Googlebot은 이 언어를 사용하지 않으므로 SEO 안전)
+# 영어 및 기타 언어 리다이렉트는 JS가 처리 — Googlebot(영어)이 / canonical을 읽을 수 있도록 서버사이드에서 제외
+# ============================================================
 /  /zh/  302  Language=zh
 /  /zh/  302  Language=zh-TW
 /  /zh/  302  Language=zh-CN
 /  /ja/  302  Language=ja
-/  /en/  302  Language=en
-/  /en/  302  Language=fr
-/  /en/  302  Language=de
-/  /en/  302  Language=es
-/  /en/  302  Language=ru
