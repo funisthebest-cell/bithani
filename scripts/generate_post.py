@@ -193,7 +193,7 @@ def generate_content(topic, client):
 }}"""
 
     msg = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-sonnet-5-5",
         max_tokens=8000,
         messages=[{"role": "user", "content": prompt}]
     )
@@ -250,6 +250,7 @@ def build_post_html(post_data, date_str, prev_entry, topic=""):
   <meta name="description" content="{description}">
   <meta name="keywords" content="{keywords}">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{SITE_URL}/blog/posts/{date_str}.html" />
   <meta name="author" content="{CLINIC_NAME} {DOCTOR}">
 
   <meta property="og:type"        content="article">

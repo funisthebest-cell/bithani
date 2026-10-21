@@ -6,10 +6,10 @@ BASE = "https://bithani.com"
 def get_canonical(filepath):
     rel = filepath.replace("\\", "/")
     rel = rel.lstrip("./")
-    if rel == "index.html":
+    if rel.endswith("/index.html"):
+        return BASE + "/" + rel[: -len("index.html")]
+    elif rel == "index.html":
         return BASE + "/"
-    elif rel == "blog/index.html":
-        return BASE + "/blog/"
     else:
         return BASE + "/" + rel
 

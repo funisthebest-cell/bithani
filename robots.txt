@@ -52,4 +52,4 @@ Allow: /
 # ==========================================
 # 사이트맵 위치
 # ==========================================
-Sitemap: https://funisthebest-cell.github.io/bithani/sitemap.xml
+Sitemap: https://bithani.com/sitemap.xml
